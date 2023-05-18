@@ -1,0 +1,37 @@
+import unittest
+from calculator import Calculator
+
+class TestCalculator(unittest.TestCase):
+
+    def setUp(self):
+        self.calc = Calculator()
+
+    def test_addition(self):
+        self.assertEqual(self.calc.add(2, 3), 5)
+
+    def test_subtraction(self):
+        self.assertEqual(self.calc.subtract(5, 2), 3)
+
+    def test_multiplication(self):
+        self.assertEqual(self.calc.multiply(2, 5), 10)
+
+    def test_division(self):
+        self.assertEqual(self.calc.divide(10, 2), 5)
+
+    def test_exponentiation(self):
+        self.assertEqual(self.calc.power(2, 3), 8)
+
+    def test_square_root(self):
+        self.assertEqual(self.calc.square_root(16), 4)
+
+    def test_absolute_value(self):
+        self.assertEqual(self.calc.absolute_value(-5), 5)
+
+    def test_floor_division(self):
+        self.assertEqual(self.calc.floor_divide(11, 2), 5)
+
+    def test_modulus(self):
+        self.assertEqual(self.calc.modulus(10, 3), 1)
+
+if __name__ == '__main__':
+    unittest.main()
